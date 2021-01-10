@@ -1,4 +1,4 @@
-import { cyan, white, black, violet } from './colors'
+import { cyan, white, black, violet, gray } from './colors'
 
 // defaultTheme
 export const defaultTheme = {
@@ -17,9 +17,14 @@ export const defaultTheme = {
     colorBody: '#f8f8fb',
     colorBodyUnderlay: white.normal,
 
-    colorText: black,
+    colorText: black.normal,
+    colorTextSecond: gray.normal,
 
     colorTextLink: cyan.dark,
+
+    colorBoxBackground: white.normal,
+
+    colorBorder: gray.light,
 }
 
 // darkTheme

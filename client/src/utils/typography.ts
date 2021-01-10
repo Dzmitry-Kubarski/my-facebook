@@ -9,7 +9,7 @@ export const secondaryFont = '"Titillium Web", sans-serif;'
 export const weight = {
     regular: 400,
     medium: 500,
-    emibold: 600,
+    semibold: 600,
     bold: 700,
     black: 900,
 }

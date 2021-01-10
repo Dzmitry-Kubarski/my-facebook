@@ -1,16 +1,14 @@
 import React, { FC } from 'react';
 
-import Button from './components/shared/Button/Button';
+import TextField from './components/shared/TextField/TextField';
 
 const App: FC = () => {
     return (
         <div style={{ padding: '80px' }}>
 
-            <Button text='new button 1' disabled />
+            <TextField label='Your Email' type='tel' />
 
-            <Button text='new button 1' full />
-
-            <Button text='noShadow' color='secondary' noShadow />
+            <TextField label='Username' type='text' />
 
         </div>
     );
