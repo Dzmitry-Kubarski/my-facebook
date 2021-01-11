@@ -35,8 +35,3 @@ export const darkTheme = {
     primaryColorHover: '#9668ff',
     primaryColorShadow: '4px 7px 12px 0 rgba(119, 80, 248, .2)',
 }
-
-
-
-
-

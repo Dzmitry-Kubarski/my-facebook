@@ -15,15 +15,16 @@ interface TextFieldProps {
     children?: React.ReactNode
 }
 
-/*--------------------------
-    styles
---------------------------*/
+/*----------------------------------------
+        styles 
+----------------------------------------*/
 const Wrapper = styled.div`
     position: relative;
+    min-height: 54px;
 
     input {
         width: 100%;
-        height: 54px;
+        min-height: 54px;
         font-family: ${primaryFont};
         border-radius: 12px;
         font-size: ${typeScale.fs16};
@@ -64,9 +65,9 @@ const LabelActive = styled(Label)`
     background-color: ${defaultTheme.colorBoxBackground};
 `
 
-/*--------------------------
-    component
---------------------------*/
+/*----------------------------------------
+    component 
+----------------------------------------*/
 const TextField: FC<TextFieldProps> = ({ label, type, required }) => {
     const [isValue, setIsValue] = useState('')
 

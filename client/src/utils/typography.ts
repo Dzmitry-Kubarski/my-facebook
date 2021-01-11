@@ -1,10 +1,11 @@
-
+/*-----------------
+    fonts
+-----------------*/
 export const primaryFont = '"Rajdhani", sans-serif;'
 export const secondaryFont = '"Titillium Web", sans-serif;'
 
-
 /*-----------------
-    2. WEIGHTS
+    weight
 -----------------*/
 export const weight = {
     regular: 400,
@@ -14,9 +15,8 @@ export const weight = {
     black: 900,
 }
 
-
 /*-----------------
-    3. SIZES
+    sizes
 -----------------*/
 export const typeScale = {
     fs10: '0.625rem',
@@ -37,5 +37,3 @@ export const typeScale = {
     fs104: '6.5rem',
     fs253: '15.81rem',
 }
-
-
