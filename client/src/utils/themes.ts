@@ -1,7 +1,11 @@
 import { cyan, white, black, violet, gray } from './colors'
 
-// defaultTheme
-export const defaultTheme = {
+/*----------------------------------------
+    lightTheme
+----------------------------------------*/
+export const lightTheme = {
+    title: 'light',
+
     primaryColor: cyan.normal,
     primaryColorLight: cyan.light,
     primaryColorDark: cyan.dark,
@@ -27,11 +31,33 @@ export const defaultTheme = {
     colorBorder: gray.light,
 }
 
-// darkTheme
+/*----------------------------------------
+    darkTheme
+----------------------------------------*/
 export const darkTheme = {
-    primaryColor: '#7750f8',
-    primaryColorDark: '#5538b5',
-    primaryColorDarker: '#7750f8',
-    primaryColorHover: '#9668ff',
-    primaryColorShadow: '4px 7px 12px 0 rgba(119, 80, 248, .2)',
+    title: 'dark',
+
+    primaryColor: '#4ff461',
+    primaryColorLight: '#4ff461',
+    primaryColorDark: '#4ff461',
+    primaryColorHover: '#4ae95b',
+    primaryColorShadow: '4px 7px 12px 0 rgba(64, 208, 79, .2)',
+
+    secondaryColor: '#7750f8',
+    secondaryColorDark: '#5538b5',
+    secondaryColorDarker: '#7750f8',
+    secondaryColorShadow: '4px 7px 12px 0 rgba(119, 80, 248, .2)',
+    secondaryColorHover: '#9668ff',
+
+    colorBody: black.normal,
+    colorBodyUnderlay: white.normal,
+
+    colorText: black.normal,
+    colorTextSecond: gray.normal,
+
+    colorTextLink: cyan.dark,
+
+    colorBoxBackground: white.normal,
+
+    colorBorder: black.normal,
 }

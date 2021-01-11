@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components'
 import { lighten } from 'polished'
 
 // utils
-import { defaultTheme, typeScale, white, weight, primaryFont, gray } from '../../../utils'
+import { lightTheme, typeScale, white, weight, primaryFont, gray } from '../../../utils'
 
 // ts
 interface ButtonProps {
@@ -28,7 +28,7 @@ const ButtonWrapper = styled.button<ButtonProps>`
     font-size: ${typeScale.fs14};
     font-weight: ${weight.bold};
     color: ${white.normal};
-    background-color: ${defaultTheme.primaryColor};
+    background-color: ${({ theme }) => theme.primaryColor};
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
@@ -38,19 +38,19 @@ const ButtonWrapper = styled.button<ButtonProps>`
     padding: 14px 28px;  
 
     &:hover {
-        background-color: ${defaultTheme.primaryColorHover}
+        background-color: ${({ theme }) => theme.primaryColorHover}
     } 
 
     &:focus {
-        background-color: ${defaultTheme.primaryColorHover};
-        border-color: ${defaultTheme.primaryColorDark};
-        box-shadow: 0 0 0 0.2rem ${lighten(0.2, defaultTheme.primaryColor)};
+        background-color: ${({ theme }) => theme.primaryColorHover};
+        border-color: ${({ theme }) => theme.primaryColorDark};
+        box-shadow: 0 0 0 0.2rem ${lighten(0.2, lightTheme.primaryColor)};
     } 
 
     &:active {
-        background-color: ${defaultTheme.primaryColorHover};
-        border-color: ${defaultTheme.primaryColorDark};
-        box-shadow: 0 0 0 0.2rem ${lighten(0.2, defaultTheme.primaryColor)};
+        background-color: ${({ theme }) => theme.primaryColorHover};
+        border-color: ${({ theme }) => theme.primaryColorDark};
+        box-shadow: 0 0 0 0.2rem ${lighten(0.2, lightTheme.primaryColor)};
     } 
 
     &:disabled {
@@ -62,23 +62,23 @@ const ButtonWrapper = styled.button<ButtonProps>`
     styles secondary variant
 ----------------------------------------*/
 ${props => props.secondary && css`
-    background-color: ${defaultTheme.secondaryColor};
-    box-shadow: ${defaultTheme.secondaryColorShadow};
+    background-color: ${({ theme }) => theme.secondaryColor};
+    box-shadow: ${({ theme }) => theme.secondaryColorShadow};
 
     &:hover {
-        background-color: ${defaultTheme.secondaryColorHover};
+        background-color: ${({ theme }) => theme.secondaryColorHover};
     }
 
     &:focus {
-    background-color: ${defaultTheme.secondaryColorHover};
-    border-color: ${defaultTheme.secondaryColorDark};
-    box-shadow: 0 0 0 0.2rem ${lighten(0.2, defaultTheme.secondaryColor)};
+    background-color: ${({ theme }) => theme.secondaryColorHover};
+    border-color: ${({ theme }) => theme.secondaryColorDark};
+    box-shadow: 0 0 0 0.2rem ${lighten(0.2, lightTheme.secondaryColor)};
     } 
 
     &:active {
-        background-color: ${defaultTheme.secondaryColorHover};
-        border-color: ${defaultTheme.secondaryColorDark};
-        box-shadow: 0 0 0 0.2rem ${lighten(0.2, defaultTheme.secondaryColor)};
+        background-color: ${({ theme }) => theme.secondaryColorHover};
+        border-color: ${({ theme }) => theme.secondaryColorDark};
+        box-shadow: 0 0 0 0.2rem ${lighten(0.2, lightTheme.secondaryColor)};
     }        
 `}
 

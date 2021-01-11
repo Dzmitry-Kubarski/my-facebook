@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 import { normalize } from 'polished'
 
-import { primaryFont, defaultTheme, weight } from '../utils'
+import { primaryFont, lightTheme, darkTheme, weight } from '../utils'
 
 export const GlobalStyle = createGlobalStyle`
     ${normalize()}
@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-size: 16px;
         font-family: ${primaryFont};
-        background-color: ${defaultTheme.colorBody};
+        background-color: ${({ theme }) => theme.colorBody};
         overflow-x: hidden;
     }
  

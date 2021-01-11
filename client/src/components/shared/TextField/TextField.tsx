@@ -5,7 +5,7 @@ import { FC, useState } from 'react'
 import styled from 'styled-components'
 
 // utils
-import { defaultTheme, typeScale, weight, primaryFont } from '../../../utils'
+import { typeScale, weight, primaryFont } from '../../../utils'
 
 // ts
 interface TextFieldProps {
@@ -29,20 +29,20 @@ const Wrapper = styled.div`
         border-radius: 12px;
         font-size: ${typeScale.fs16};
         font-weight: ${weight.bold};
-        background-color: ${defaultTheme.colorBoxBackground};
-        border: 1px solid ${defaultTheme.colorBorder};
-        color: ${defaultTheme.colorText};
+        background-color: ${({ theme }) => theme.colorBoxBackground};
+        border: 1px solid ${({ theme }) => theme.colorBorder};
+        color: ${({ theme }) => theme.colorText};
         padding: 0 18px;
         transition: border-color .2s ease-in-out;
 
         &:focus {
-            border-color: ${defaultTheme.secondaryColor};
+            border-color: ${({ theme }) => theme.secondaryColor};
 
             + label {
                 top: -6px;
                 left: 12px; 
                 font-size: ${typeScale.fs12};  
-                background-color: ${defaultTheme.colorBoxBackground};            
+                background-color: ${({ theme }) => theme.colorBoxBackground};            
             }
         }      
     }   
@@ -53,7 +53,7 @@ const Label = styled.label`
     left: 20px;
     font-size: ${typeScale.fs16};
     font-weight: ${weight.semibold};
-    color: ${defaultTheme.colorTextSecond};
+    color: ${({ theme }) => theme.colorTextSecond};
     pointer-events: none;
     padding: 0 6px;
     transition: all .3s ease-in-out;
@@ -62,7 +62,7 @@ const LabelActive = styled(Label)`
     top: -6px;
     left: 12px;
     font-size: ${typeScale.fs12};
-    background-color: ${defaultTheme.colorBoxBackground};
+    background-color: ${({ theme }) => theme.colorBoxBackground};
 `
 
 /*----------------------------------------

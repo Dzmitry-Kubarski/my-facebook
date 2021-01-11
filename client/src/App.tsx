@@ -1,26 +1,43 @@
-import React, { FC } from 'react';
+// core
+import React, { FC, useState } from 'react'
+import { ThemeProvider } from 'styled-components'
 
-import TextField from './components/shared/TextField/TextField';
-import Button from './components/shared/Button/Button';
+// components
+import TextField from './components/shared/TextField/TextField'
+import Button from './components/shared/Button/Button'
+
+// utils
+import { darkTheme, lightTheme, GlobalStyle } from './utils'
 
 const App: FC = () => {
+    const [myTheme, setMyTheme] = useState(lightTheme)
+
+    const toggleTheme = (): void => {
+        setMyTheme(myTheme.title === 'light' ? darkTheme : lightTheme)
+    }
+
     return (
-        <div style={{ padding: '80px' }}>
+        <ThemeProvider theme={myTheme}>
+            <div style={{ padding: '80px' }}>
 
-            <TextField label='Your Email' type='tel' />
+                <TextField label='Your Email' type='tel' />
 
-            <TextField label='Username' type='text' />
+                <TextField label='Username' type='text' />
 
-            <Button text='button' full />
+                <Button text='button' full />
 
-            <Button text='button' full secondary />
+                <Button text='button' full secondary />
 
-            <Button text='button' full secondary />
+                <Button text='button' full secondary />
 
-        </div>
-    );
-};
+                <button onClick={toggleTheme}>темная тема</button>
+            </div>
 
-export default App;
+            <GlobalStyle />
+        </ThemeProvider>
+    )
+}
+
+export default App
 
 
