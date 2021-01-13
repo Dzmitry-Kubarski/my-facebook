@@ -49,7 +49,7 @@ export const darkTheme = {
     secondaryColorShadow: '4px 7px 12px 0 rgba(119, 80, 248, .2)',
     secondaryColorHover: '#9668ff',
 
-    colorBody: black.normal,
+    colorBody: '#161b28',
     colorBodyUnderlay: white.normal,
 
     colorText: black.normal,
@@ -57,7 +57,7 @@ export const darkTheme = {
 
     colorTextLink: cyan.dark,
 
-    colorBoxBackground: white.normal,
+    colorBoxBackground: '#1d2333',
 
     colorBorder: black.normal,
 }

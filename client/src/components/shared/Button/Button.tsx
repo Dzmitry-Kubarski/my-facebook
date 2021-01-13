@@ -85,13 +85,14 @@ ${props => props.secondary && css`
 /*----------------------------------------
     styles modifiers
 ----------------------------------------*/
-${props => props.noShadow && css`
+    ${props => props.noShadow && css`
         box-shadow: none;  
-`}
+    `}
 
-${props => props.full && css`
+    ${props => props.full && css`
         width: 100%;  
-`}
+    `}
+
 `
 
 /*--------------------------
