@@ -10,13 +10,12 @@ export interface DemoStorybookWrapperProps {
 }
 
 const Wrapper = styled.div`
-    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: ${({ theme }) => theme.colorBody};   
-    padding: 50px;
+    padding: 150px 50px;
     box-sizing: border-box;
 `
 

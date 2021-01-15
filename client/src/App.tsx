@@ -9,6 +9,9 @@ import { darkTheme, lightTheme, GlobalStyle } from './utils'
 import TextField from './components/shared/TextField/TextField'
 import Button from './components/shared/Button/Button'
 import Сheckbox from './components/shared/Сheckbox/Сheckbox'
+import LinkText from './components/shared/LinkText/LinkText'
+import { Link, Route } from 'react-router-dom';
+import TestPage from './pages/TestPage';
 
 
 const App: FC = () => {
@@ -23,9 +26,11 @@ const App: FC = () => {
             <div style={{ padding: '80px' }}>
                 <button onClick={toggleTheme} style={{ margin: '30px' }}>темная тема</button>
 
-                <Сheckbox label='this email' name='email' id='email' />
+                <LinkText text='Forget' to='/users' />
 
-                <Сheckbox label='this name' id='name' name='name' />
+                <LinkText text='Ссылка в тексте' to='/users' static />
+
+                <Route path='/test-page' component={TestPage} />
             </div>
 
             <GlobalStyle />

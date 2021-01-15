@@ -1,15 +1,15 @@
 // core
-import React, { FC, ChangeEvent } from 'react'
+import React, { FC } from 'react'
 import SvgCrossIcon from '../../../icons/CrossIcon'
 
 // libs
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 // utils
-import { typeScale, weight } from '../../../utils'
+import { typeScale, weight, primaryFont, black } from '../../../utils'
 
 // ts
-interface СheckboxProps {
+export interface СheckboxProps {
     label: string
     id: string
     name: string
@@ -34,11 +34,13 @@ const СheckboxWrapper = styled.div`
     position: relative;    
 
     label {
-        padding-left: 34px;
+        font-family: ${primaryFont};
         font-size: ${typeScale.fs14};
         font-weight: ${weight.bold};
+        color: ${black.normal};
         line-height: 22px;
         cursor: pointer;
+        padding-left: 34px;
     }
 `
 const СheckboxImagesBox = styled.div`
@@ -47,7 +49,7 @@ const СheckboxImagesBox = styled.div`
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     width: 22px;
     height: 22px;
     border: 1px solid ${({ theme }) => theme.colorBorder};

@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import { typeScale, weight, primaryFont } from '../../../utils'
 
 // ts
-interface TextFieldProps {
+export interface TextFieldProps {
     label: string
     type?: 'text' | 'email' | 'password' | 'search' | 'tel' | 'number'
     required?: boolean
@@ -32,6 +32,7 @@ const Wrapper = styled.div`
         background-color: ${({ theme }) => theme.colorBoxBackground};
         border: 1px solid ${({ theme }) => theme.colorBorder};
         color: ${({ theme }) => theme.colorText};
+        outline: none;
         padding: 0 18px;
         transition: border-color .2s ease-in-out;
 
@@ -51,8 +52,9 @@ const Label = styled.label`
     position: absolute;
     top: 20px;
     left: 20px;
+    font-family: ${primaryFont};
     font-size: ${typeScale.fs16};
-    font-weight: ${weight.semibold};
+    font-weight: ${weight.regular};
     color: ${({ theme }) => theme.colorTextSecond};
     pointer-events: none;
     padding: 0 6px;
