@@ -2,14 +2,14 @@
 import React, { FC, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
+// utils
+import { darkTheme, lightTheme, GlobalStyle } from './utils'
+
 // components
 import TextField from './components/shared/TextField/TextField'
 import Button from './components/shared/Button/Button'
 import Сheckbox from './components/shared/Сheckbox/Сheckbox'
 
-
-// utils
-import { darkTheme, lightTheme, GlobalStyle } from './utils'
 
 const App: FC = () => {
     const [myTheme, setMyTheme] = useState(lightTheme)

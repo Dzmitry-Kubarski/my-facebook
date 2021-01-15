@@ -9,7 +9,7 @@ import { lighten } from 'polished'
 import { lightTheme, typeScale, white, weight, primaryFont, gray } from '../../../utils'
 
 // ts
-interface ButtonProps {
+export interface ButtonProps {
     secondary?: boolean
     text: string
     full?: boolean
@@ -79,7 +79,12 @@ ${props => props.secondary && css`
         background-color: ${({ theme }) => theme.secondaryColorHover};
         border-color: ${({ theme }) => theme.secondaryColorDark};
         box-shadow: 0 0 0 0.2rem ${lighten(0.2, lightTheme.secondaryColor)};
-    }        
+    }  
+    
+    &:disabled {
+        background-color: ${gray.normal};
+        cursor: not-allowed;
+    }
 `}
 
 /*----------------------------------------
