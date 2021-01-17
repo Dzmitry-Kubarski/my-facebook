@@ -12,6 +12,9 @@ import Сheckbox from './components/shared/Сheckbox/Сheckbox'
 import LinkText from './components/shared/LinkText/LinkText'
 import { Link, Route } from 'react-router-dom';
 import TestPage from './pages/TestPage';
+import SocialLinks from './components/shared/SocialLinks/SocialLinks'
+import SocialLink from './components/shared/SocialLink/SocialLink'
+import { CrossIcon, DiscordIcon, DribbbleIcon, FacebookIcon, GoogleIcon, InstagramIcon, PatreonIcon, TwitterIcon, YoutubeIcon } from './icons'
 
 
 const App: FC = () => {
@@ -24,13 +27,45 @@ const App: FC = () => {
     return (
         <ThemeProvider theme={myTheme}>
             <div style={{ padding: '80px' }}>
-                <button onClick={toggleTheme} style={{ margin: '30px' }}>темная тема</button>
+                {/* <button onClick={toggleTheme} style={{ margin: '30px' }}>темная тема</button> */}
 
-                <LinkText text='Forget' to='/users' />
 
-                <LinkText text='Ссылка в тексте' to='/users' static />
+                <SocialLinks>
+                    <SocialLink href='https://www.youtube.com/' social='facebook'>
+                        <FacebookIcon />
+                    </SocialLink>
 
-                <Route path='/test-page' component={TestPage} />
+                    <SocialLink href='https://www.youtube.com/' social='twitter'>
+                        <TwitterIcon />
+                    </SocialLink>
+
+                    <SocialLink href='https://www.youtube.com/' social='youtube'>
+                        <YoutubeIcon />
+                    </SocialLink>
+
+                    <SocialLink href='https://www.youtube.com/' social='instagram'>
+                        <InstagramIcon />
+                    </SocialLink>
+
+                    <SocialLink href='https://www.youtube.com/' social='patreon'>
+                        <PatreonIcon />
+                    </SocialLink>
+
+                    <SocialLink href='https://www.youtube.com/' social='discord'>
+                        <DiscordIcon />
+                    </SocialLink>
+
+                    <SocialLink href='https://www.youtube.com/' social='google'>
+                        <GoogleIcon />
+                    </SocialLink>
+
+                    <SocialLink href='https://www.youtube.com/' social='dribbble'>
+                        <DribbbleIcon />
+                    </SocialLink>
+
+                </SocialLinks>
+
+                {/* <Route path='/test-page' component={TestPage} /> */}
             </div>
 
             <GlobalStyle />
@@ -39,5 +74,7 @@ const App: FC = () => {
 }
 
 export default App
+
+
 
 

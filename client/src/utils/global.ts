@@ -49,4 +49,8 @@ export const GlobalStyle = createGlobalStyle`
         height: auto;
     }
 
+    ul, li, ol {
+    list-style: none;    
+}
+
 `
