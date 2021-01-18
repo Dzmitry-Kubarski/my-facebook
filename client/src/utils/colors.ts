@@ -56,7 +56,7 @@ export const yellow = {
 
 
 /*-----------------------
-    1. SOCIAL COLORS
+     SOCIAL COLORS
 -----------------------*/
 
 export const social = {
@@ -71,6 +71,11 @@ export const social = {
 }
 
 
-
-
-
+/*-----------------------
+     SHADOW COLORS
+-----------------------*/
+export const shadow = {
+    normal: '3px 5px 20px 0 rgba(94, 92, 154, .1)',
+    light: '3px 5px 40px 0 rgba(94, 92, 154, .06)',
+    dark: '3px 5px 20px 0px rgba(94, 92, 154, .16)',
+}

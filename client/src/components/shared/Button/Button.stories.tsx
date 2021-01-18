@@ -1,15 +1,20 @@
-import React from 'react';
+// core
 import { Story, Meta } from '@storybook/react/types-6-0'
 
+// component current
 import { ButtonProps } from './Button'
 import Button from './Button'
+
+// container demo
 import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
 
+// options
 export default {
   title: 'Button',
   component: Button,
 } as Meta
 
+// show components
 const Template: Story<ButtonProps> = (args) =>
   <DemoStorybookWrapper >
     <Button {...args} />
@@ -37,5 +42,3 @@ NoShadow.args = {
   noShadow: true,
   text: 'Button noShadow',
 }
-
-

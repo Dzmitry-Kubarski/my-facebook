@@ -54,7 +54,7 @@ const Label = styled.label`
     left: 20px;
     font-family: ${primaryFont};
     font-size: ${typeScale.fs16};
-    font-weight: ${weight.regular};
+    font-weight: ${weight.semibold};
     color: ${({ theme }) => theme.colorTextSecond};
     pointer-events: none;
     padding: 0 6px;

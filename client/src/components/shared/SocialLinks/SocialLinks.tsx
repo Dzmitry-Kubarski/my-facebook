@@ -14,7 +14,6 @@ export interface SocialLinksProps {
 const LinksWrapper = styled.ul<SocialLinksProps>`
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 
     ${props => props.small && css`
 

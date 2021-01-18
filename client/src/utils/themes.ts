@@ -28,6 +28,7 @@ export const lightTheme = {
 
     colorBoxBackground: white.normal,
 
+    colorDivider: '#eaeaf5',
     colorBorder: gray.light,
 }
 
@@ -52,12 +53,13 @@ export const darkTheme = {
     colorBody: '#161b28',
     colorBodyUnderlay: white.normal,
 
-    colorText: black.normal,
+    colorText: white.normal,
     colorTextSecond: gray.normal,
 
     colorTextLink: cyan.dark,
 
     colorBoxBackground: '#1d2333',
 
+    colorDivider: '#2f3749',
     colorBorder: black.normal,
 }

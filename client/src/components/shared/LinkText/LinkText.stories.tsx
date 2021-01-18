@@ -1,13 +1,15 @@
-import React from 'react';
+// core
 import { Story, Meta } from '@storybook/react/types-6-0'
-import { linkTo } from '@storybook/addon-links'
-import { withLinks } from '@storybook/addon-links'
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom'
 
+// component current
 import { LinkTextProps } from './LinkText'
 import LinkText from './LinkText'
+
+// container demo
 import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
 
+// options
 export default {
     title: 'LinkText',
     decorators: [
@@ -16,6 +18,7 @@ export default {
     component: LinkText,
 } as Meta
 
+// show components
 const Template: Story<LinkTextProps> = (args) =>
     <DemoStorybookWrapper >
         <LinkText {...args} />
@@ -29,7 +32,7 @@ Default.args = {
 
 export const Static = Template.bind({})
 Static.args = {
-    text: 'Это ссылка в тесте поста',
+    text: 'Это ссылка в тексте поста',
     to: '/test-page',
     static: true,
 }

@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -37,4 +40,8 @@ body.sb-show-main.sb-main-padded{
     padding: 0;
     margin: 0;
     display: block;
+}
+
+body {
+    font-family: "Rajdhani",sans-serif;
 }

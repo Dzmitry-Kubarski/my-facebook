@@ -3,7 +3,7 @@ import React, { FC, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 // utils
-import { darkTheme, lightTheme, GlobalStyle } from './utils'
+import { darkTheme, lightTheme, GlobalStyle, typeScale, weight, gray } from './utils'
 
 // components
 import TextField from './components/shared/TextField/TextField'
@@ -15,6 +15,9 @@ import TestPage from './pages/TestPage';
 import SocialLinks from './components/shared/SocialLinks/SocialLinks'
 import SocialLink from './components/shared/SocialLink/SocialLink'
 import { CrossIcon, DiscordIcon, DribbbleIcon, FacebookIcon, GoogleIcon, InstagramIcon, PatreonIcon, TwitterIcon, YoutubeIcon } from './icons'
+import { FormRow } from './components/shared/FormRow/FormRow'
+import Form from './components/shared/Form/Form';
+import { LinedText } from './components/shared/LinedText/LinedText'
 
 
 const App: FC = () => {
@@ -27,43 +30,51 @@ const App: FC = () => {
     return (
         <ThemeProvider theme={myTheme}>
             <div style={{ padding: '80px' }}>
-                {/* <button onClick={toggleTheme} style={{ margin: '30px' }}>темная тема</button> */}
+                <button onClick={toggleTheme} style={{ margin: '30px' }}>темная тема</button>
 
+                <Form title='Register'>
 
-                <SocialLinks>
-                    <SocialLink href='https://www.youtube.com/' social='facebook'>
-                        <FacebookIcon />
-                    </SocialLink>
+                    <FormRow>
+                        <TextField label='User name' />
+                    </FormRow>
 
-                    <SocialLink href='https://www.youtube.com/' social='twitter'>
-                        <TwitterIcon />
-                    </SocialLink>
+                    <FormRow>
+                        <TextField label='user email' />
+                    </FormRow>
 
-                    <SocialLink href='https://www.youtube.com/' social='youtube'>
-                        <YoutubeIcon />
-                    </SocialLink>
+                    <FormRow spaceBetween>
+                        <Сheckbox label='Remember Me' id='remember' name='remember' />
+                        <LinkText text='Forgot Password?' to='/forgot' />
+                    </FormRow>
 
-                    <SocialLink href='https://www.youtube.com/' social='instagram'>
-                        <InstagramIcon />
-                    </SocialLink>
+                    <FormRow>
+                        <Button text='Login to your Account!' full secondary />
+                    </FormRow>
 
-                    <SocialLink href='https://www.youtube.com/' social='patreon'>
-                        <PatreonIcon />
-                    </SocialLink>
+                    <LinedText>Login with your Social Account</LinedText>
 
-                    <SocialLink href='https://www.youtube.com/' social='discord'>
-                        <DiscordIcon />
-                    </SocialLink>
+                    <FormRow marginTop>
+                        <SocialLinks>
+                            <SocialLink href='https://yandex.by/' social='facebook'>
+                                <FacebookIcon />
+                            </SocialLink>
 
-                    <SocialLink href='https://www.youtube.com/' social='google'>
-                        <GoogleIcon />
-                    </SocialLink>
+                            <SocialLink href='https://yandex.by/' social='twitter'>
+                                <TwitterIcon />
+                            </SocialLink>
 
-                    <SocialLink href='https://www.youtube.com/' social='dribbble'>
-                        <DribbbleIcon />
-                    </SocialLink>
+                            <SocialLink href='https://yandex.by/' social='dribbble'>
+                                <DribbbleIcon />
+                            </SocialLink>
 
-                </SocialLinks>
+                            <SocialLink href='https://yandex.by/' social='youtube'>
+                                <YoutubeIcon />
+                            </SocialLink>
+                        </SocialLinks>
+                    </FormRow>
+
+                </Form>
+
 
                 {/* <Route path='/test-page' component={TestPage} /> */}
             </div>

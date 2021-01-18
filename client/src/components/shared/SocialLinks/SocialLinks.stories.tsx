@@ -1,13 +1,21 @@
-import React from 'react';
+// core
 import { Story, Meta } from '@storybook/react/types-6-0'
 import { MemoryRouter } from 'react-router-dom';
 
+// component current
 import { SocialLinksProps } from './SocialLinks'
 import SocialLinks from './SocialLinks'
+
+// container demo
 import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
+
+// components
 import SocialLink from '../SocialLink/SocialLink';
+
+// icons
 import { DiscordIcon, DribbbleIcon, FacebookIcon, GoogleIcon, InstagramIcon, PatreonIcon, TwitterIcon, YoutubeIcon } from '../../../icons'
 
+// options
 export default {
     title: 'SocialLinks',
     decorators: [
@@ -16,6 +24,7 @@ export default {
     component: SocialLinks,
 } as Meta
 
+// show components
 const Template: Story<SocialLinksProps> = (args) =>
     <DemoStorybookWrapper >
         <SocialLinks {...args}>
