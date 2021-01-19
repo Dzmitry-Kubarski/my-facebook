@@ -5,9 +5,9 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 // component current
 import { СheckboxProps } from './Сheckbox'
 import Сheckbox from './Сheckbox'
+import { DemoStorybookWrapper } from '../..';
 
 // container demo
-import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
 
 // options
 export default {

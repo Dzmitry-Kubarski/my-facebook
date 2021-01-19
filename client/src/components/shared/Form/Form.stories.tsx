@@ -3,22 +3,15 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import { MemoryRouter } from 'react-router-dom'
 
 // container demo
-import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
 
 // component current
 import { FormProps } from './Form'
 import Form from './Form'
 
 // components
-import { FormRow } from '../FormRow/FormRow';
-import TextField from '../TextField/TextField';
-import LinkText from '../LinkText/LinkText';
-import Сheckbox from '../Сheckbox/Сheckbox';
-import Button from '../Button/Button';
-import { LinedText } from '../LinedText/LinedText';
-import SocialLinks from '../SocialLinks/SocialLinks';
-import SocialLink from '../SocialLink/SocialLink';
-import { DribbbleIcon, FacebookIcon, TwitterIcon, YoutubeIcon } from '../../../icons';
+import { DribbbleIcon, FacebookIcon, TwitterIcon, YoutubeIcon } from '../../../icons'
+import { FormRow, TextField, LinkText, Сheckbox, Button, LinedText, SocialLinks, SocialLink } from '..'
+import { DemoStorybookWrapper } from '../..'
 
 // options
 export default {
@@ -31,7 +24,7 @@ export default {
 
 // show components
 const Template: Story<FormProps> = (args) =>
-    <DemoStorybookWrapper >
+    <DemoStorybookWrapper>
 
         <Form title='Register' {...args}>
 

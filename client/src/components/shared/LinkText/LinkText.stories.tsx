@@ -5,9 +5,9 @@ import { MemoryRouter } from 'react-router-dom'
 // component current
 import { LinkTextProps } from './LinkText'
 import LinkText from './LinkText'
+import { DemoStorybookWrapper } from '../..'
 
 // container demo
-import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
 
 // options
 export default {
@@ -20,7 +20,7 @@ export default {
 
 // show components
 const Template: Story<LinkTextProps> = (args) =>
-    <DemoStorybookWrapper >
+    <DemoStorybookWrapper>
         <LinkText {...args} />
     </DemoStorybookWrapper>
 

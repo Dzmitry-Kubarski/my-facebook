@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { TextFieldProps } from './TextField'
 import TextField from './TextField'
-import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
+import { DemoStorybookWrapper } from '../..';
 
 export default {
     title: 'TextField',
@@ -11,7 +11,7 @@ export default {
 } as Meta
 
 const Template: Story<TextFieldProps> = (args) =>
-    <DemoStorybookWrapper >
+    <DemoStorybookWrapper>
         <TextField {...args} />
     </DemoStorybookWrapper>
 

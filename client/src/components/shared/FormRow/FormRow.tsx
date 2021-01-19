@@ -9,7 +9,7 @@ export interface FormRowProps {
 }
 
 // component
-export const FormRow = styled.div<FormRowProps>`
+const FormRow = styled.div<FormRowProps>`
 
     & + & {
         margin-top: 28px;
@@ -24,5 +24,6 @@ export const FormRow = styled.div<FormRowProps>`
     ${props => props.marginTop && css`
         margin-top: 30px;
     `}
-
 `
+
+export default FormRow

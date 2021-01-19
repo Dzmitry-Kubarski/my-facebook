@@ -7,13 +7,13 @@ import { SocialLinksProps } from './SocialLinks'
 import SocialLinks from './SocialLinks'
 
 // container demo
-import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
 
 // components
 import SocialLink from '../SocialLink/SocialLink';
 
 // icons
 import { DiscordIcon, DribbbleIcon, FacebookIcon, GoogleIcon, InstagramIcon, PatreonIcon, TwitterIcon, YoutubeIcon } from '../../../icons'
+import { DemoStorybookWrapper } from '../..';
 
 // options
 export default {
@@ -26,7 +26,7 @@ export default {
 
 // show components
 const Template: Story<SocialLinksProps> = (args) =>
-    <DemoStorybookWrapper >
+    <DemoStorybookWrapper>
         <SocialLinks {...args}>
 
             <SocialLink href='https://www.youtube.com/' social='facebook'>

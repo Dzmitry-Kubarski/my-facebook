@@ -10,7 +10,7 @@ export interface LinedTextProps {
 }
 
 // component
-export const LinedText = styled.p`
+const LinedText = styled.p`
 
     position: relative;
     font-size: ${typeScale.fs14};
@@ -18,6 +18,7 @@ export const LinedText = styled.p`
     color: ${({ theme }) => theme.colorText};
     text-align: center;    
     margin-top: 40px;    
+    transition: color .3s ease-in-out;
 
     &:after, &:before {
         position: absolute;
@@ -25,7 +26,8 @@ export const LinedText = styled.p`
         content: "";
         width: 70px;
         height: 1px;
-        background-color: ${({ theme }) => theme.colorDivider};        
+        background-color: ${({ theme }) => theme.colorDivider};  
+        transition: background-color .3s ease-in-out;      
     }
 
     &:after {
@@ -37,3 +39,5 @@ export const LinedText = styled.p`
     }    
 
 `
+
+export default LinedText

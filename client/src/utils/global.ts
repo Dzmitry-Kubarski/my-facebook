@@ -50,7 +50,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ul, li, ol {
-    list-style: none;    
+    list-style: none;      
+    
 }
 
 `

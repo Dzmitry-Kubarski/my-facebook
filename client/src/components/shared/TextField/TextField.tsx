@@ -34,7 +34,7 @@ const Wrapper = styled.div`
         color: ${({ theme }) => theme.colorText};
         outline: none;
         padding: 0 18px;
-        transition: border-color .2s ease-in-out;
+        transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
 
         &:focus {
             border-color: ${({ theme }) => theme.secondaryColor};

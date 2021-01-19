@@ -56,7 +56,7 @@ const СheckboxImagesBox = styled.div`
     border-radius: 6px;
     background-color: ${({ theme }) => theme.colorBoxBackground};    
     pointer-events: none;    
-    transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
 
     svg {
         width: 12px;
@@ -78,7 +78,7 @@ const СheckboxImagesBox = styled.div`
 /*--------------------------
     component
 --------------------------*/
-const СheckboxTest: FC<СheckboxProps> = ({ label, name, id }) => {
+const Сheckbox: FC<СheckboxProps> = ({ label, name, id }) => {
 
     return (
         <СheckboxWrapper>
@@ -93,5 +93,4 @@ const СheckboxTest: FC<СheckboxProps> = ({ label, name, id }) => {
     )
 }
 
-export default СheckboxTest
-
+export default Сheckbox

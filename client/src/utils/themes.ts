@@ -30,6 +30,11 @@ export const lightTheme = {
 
     colorDivider: '#eaeaf5',
     colorBorder: gray.light,
+
+    colorTabBorder: white.normal,
+    colorTabText: white.normal,
+    colorTabTextActive: black.normal,
+    colorTabTextActiveBackground: white.normal,
 }
 
 /*----------------------------------------
@@ -62,4 +67,9 @@ export const darkTheme = {
 
     colorDivider: '#2f3749',
     colorBorder: black.normal,
+
+    colorTabBorder: '#1d2333',
+    colorTabText: '#1d2333',
+    colorTabTextActive: white.normal,
+    colorTabTextActiveBackground: '#1d2333',
 }

@@ -4,9 +4,9 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 // component current
 import { ButtonProps } from './Button'
 import Button from './Button'
+import { DemoStorybookWrapper } from '../..'
 
 // container demo
-import DemoStorybookWrapper from '../../DemoStorybookWrapper/DemoStorybookWrapper'
 
 // options
 export default {
