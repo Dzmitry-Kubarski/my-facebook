@@ -11,7 +11,7 @@ export interface SocialLinksProps {
 }
 
 // styles
-const LinksWrapper = styled.ul<SocialLinksProps>`
+const StyledLinksWrapper = styled.ul<SocialLinksProps>`
     display: flex;
     justify-content: center;
 
@@ -36,9 +36,9 @@ const LinksWrapper = styled.ul<SocialLinksProps>`
 // components
 const SocialLinks: FC<SocialLinksProps> = ({ children, small }) => {
     return (
-        <LinksWrapper small={small}>
+        <StyledLinksWrapper small={small}>
             {children}
-        </LinksWrapper>
+        </StyledLinksWrapper>
     )
 }
 

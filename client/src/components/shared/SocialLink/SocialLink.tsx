@@ -17,7 +17,7 @@ export interface SocialLinkProps {
 /*----------------------------------------
         styles 
 ----------------------------------------*/
-const LinkWrapper = styled.li<Pick<SocialLinkProps, | 'social'>>`
+const StyledLinkWrapper = styled.li<Pick<SocialLinkProps, | 'social'>>`
 
     margin-right: 12px;
 
@@ -85,11 +85,11 @@ const LinkWrapper = styled.li<Pick<SocialLinkProps, | 'social'>>`
 --------------------------*/
 const SocialLink: FC<SocialLinkProps> = ({ href, children, social }) => {
     return (
-        <LinkWrapper social={social}>
+        <StyledLinkWrapper social={social}>
             <a href={href} target="_blank" rel="noopener noreferrer">
                 {children}
             </a>
-        </LinkWrapper>
+        </StyledLinkWrapper>
     )
 }
 

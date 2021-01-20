@@ -13,18 +13,18 @@ export interface FormProps {
 }
 
 // styles
-export const FormWrapper = styled.div`
+export const StyledFormWrapper = styled.div`
     position: relative;
     width: 100%;
     max-width: 485px;    
     border-radius: 12px;
     background-color: ${({ theme }) => theme.colorBoxBackground};
-    box-shadow: ${shadow.normal};
+    box-shadow: ${shadow.dark};
     padding: 64px;
     transition: background-color .3s ease-in-out;
 `
 
-const FormTitle = styled.h2`
+const StyledFormTitle = styled.h2`
     font-size: ${typeScale.fs26};
     text-align: center;
     color: ${({ theme }) => theme.colorText};
@@ -32,7 +32,7 @@ const FormTitle = styled.h2`
     transition: color .3s ease-in-out;
 `
 
-const Decoration = styled.img`
+const StyledDecoration = styled.img`
     position: absolute;
     top: -14px;
     left: -80px;
@@ -41,15 +41,15 @@ const Decoration = styled.img`
 // component
 const Form: FC<FormProps> = ({ title, decoration, children }) => {
     return (
-        <FormWrapper>
-            <Decoration src={decoration} />
+        <StyledFormWrapper>
+            <StyledDecoration src={decoration} />
 
-            {title && <FormTitle>{title}</FormTitle>}
+            {title && <StyledFormTitle>{title}</StyledFormTitle>}
 
             <form>
                 {children}
             </form>
-        </FormWrapper>
+        </StyledFormWrapper>
     )
 }
 

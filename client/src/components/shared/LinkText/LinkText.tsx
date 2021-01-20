@@ -18,7 +18,9 @@ export interface LinkTextProps {
 /*----------------------------------------
         styles 
 ----------------------------------------*/
-const LinkTextWrapper = styled.div<Pick<LinkTextProps, | 'static'>>`
+const StyledLinkTextWrapper = styled.div<Pick<LinkTextProps, | 'static'>>`
+    display: inline-block;
+    padding-left: 5px;
 
     a {
         font-family: ${primaryFont};
@@ -45,11 +47,11 @@ const LinkTextWrapper = styled.div<Pick<LinkTextProps, | 'static'>>`
 --------------------------*/
 const LinkText: FC<LinkTextProps> = ({ text, to, ...props }) => {
     return (
-        <LinkTextWrapper {...props}>
+        <StyledLinkTextWrapper  {...props}>
             <Link to={`/${to}`}>
                 {text}
             </Link>
-        </LinkTextWrapper>
+        </StyledLinkTextWrapper>
     )
 }
 

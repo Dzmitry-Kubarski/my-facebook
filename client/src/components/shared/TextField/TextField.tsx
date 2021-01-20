@@ -12,13 +12,14 @@ export interface TextFieldProps {
     label: string
     type?: 'text' | 'email' | 'password' | 'search' | 'tel' | 'number'
     required?: boolean
+    autoFocus?: boolean
     children?: React.ReactNode
 }
 
 /*----------------------------------------
         styles 
 ----------------------------------------*/
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
     position: relative;
     min-height: 54px;
 
@@ -48,7 +49,7 @@ const Wrapper = styled.div`
         }      
     }   
 `
-const Label = styled.label`
+const StyledLabel = styled.label`
     position: absolute;
     top: 20px;
     left: 20px;
@@ -60,7 +61,7 @@ const Label = styled.label`
     padding: 0 6px;
     transition: all .3s ease-in-out;
 `
-const LabelActive = styled(Label)`
+const StyledLabelActive = styled(StyledLabel)`
     top: -6px;
     left: 12px;
     font-size: ${typeScale.fs12};
@@ -70,24 +71,20 @@ const LabelActive = styled(Label)`
 /*----------------------------------------
     component 
 ----------------------------------------*/
-const TextField: FC<TextFieldProps> = ({ label, type, required }) => {
+const TextField: FC<TextFieldProps> = ({ label, type = 'text', required, autoFocus }) => {
     const [isValue, setIsValue] = useState('')
 
     return (
-        <Wrapper>
-            <input type={type} value={isValue} onChange={(e) => setIsValue(e.target.value)} required={required} />
+        <StyledWrapper>
+            <input type={type} value={isValue} onChange={(e) => setIsValue(e.target.value)} required={required} autoFocus={autoFocus} />
 
             {!isValue
-                ? <Label>{label}</Label>
-                : <LabelActive>{label}</LabelActive>
+                ? <StyledLabel>{label}</StyledLabel>
+                : <StyledLabelActive>{label}</StyledLabelActive>
             }
 
-        </Wrapper>
+        </StyledWrapper>
     );
 };
 
 export default TextField
-
-TextField.defaultProps = {
-    type: 'text',
-}

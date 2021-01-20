@@ -8,14 +8,18 @@ import { ThemeProvider } from 'styled-components'
 // utils
 import { darkTheme, lightTheme, GlobalStyle, typeScale, weight, gray } from './utils'
 
-// components
-import TestPage from './pages/TestPage'
-import AuthPage from './pages/AuthPage'
-import { ToggleTheme } from './components';
+// routes
+import { useRoutes } from './routes/routes'
 
+// components
+import { Header } from './components'
+import { Container, Search, ToggleTheme } from './components/shared'
 
 const App: FC = () => {
     const [myTheme, setMyTheme] = useState(lightTheme)
+
+    const isAuthenticated = false // mock
+    const routes = useRoutes(isAuthenticated)
 
     const toggleTheme = (): void => {
         setMyTheme(myTheme.title === 'light' ? darkTheme : lightTheme)
@@ -23,11 +27,13 @@ const App: FC = () => {
 
     return (
         <ThemeProvider theme={myTheme}>
-
             <ToggleTheme toggleTheme={toggleTheme} />
 
-            <Route path='/test-page' component={TestPage} />
-            <Route path='/' component={AuthPage} />
+            {isAuthenticated && <Header />}
+
+            <div>
+                {routes}
+            </div>
 
             <GlobalStyle />
         </ThemeProvider>

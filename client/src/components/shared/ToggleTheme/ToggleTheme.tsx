@@ -5,8 +5,8 @@ import { FC } from 'react'
 import styled from 'styled-components'
 
 // images
-import sunImg from '../../images/landing/sun-3.png'
-import nightImg from '../../images/landing/night.png'
+import sunImg from '../../../images/landing/sun-3.png'
+import nightImg from '../../../images/landing/night.png'
 
 // ts
 export interface ToggleThemeProps {
@@ -14,7 +14,7 @@ export interface ToggleThemeProps {
 }
 
 // styles
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
     position: fixed;
     z-index: 99;
     top: 30px;
@@ -25,7 +25,7 @@ const Wrapper = styled.div`
         
         &:checked {
             + label {
-                background: rgb(59,53,62);
+                background: transparent;
                 background: linear-gradient(90deg, rgba(59,53,62,1) 0%, rgba(223,156,75,1) 100%);
                 
                 span {
@@ -41,11 +41,11 @@ const Wrapper = styled.div`
         align-items: center;
         width: 90px;
         height: 45px;
-        background: rgb(255,255,255);
-        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,253,205,1) 100%);
+        background: transparent;
+        background: linear-gradient(90deg, #ffffff 0%, rgba(255,253,205,1) 0%);
         border-radius: 85px;
         border: 1px solid white;
-        transition: background .8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transition: background .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         cursor: pointer;
         padding: 7px;
     }
@@ -66,13 +66,13 @@ const Wrapper = styled.div`
 // component
 const ToggleTheme: FC<ToggleThemeProps> = ({ toggleTheme }) => {
     return (
-        <Wrapper>
+        <StyledWrapper>
             <input type="checkbox" id="day" onChange={toggleTheme} />
 
             <label htmlFor="day">
                 <span></span>
             </label>
-        </Wrapper>
+        </StyledWrapper>
     )
 }
 

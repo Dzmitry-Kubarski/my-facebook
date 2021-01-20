@@ -1,23 +1,19 @@
 // core
 import { FC } from 'react'
-import styled, { css } from 'styled-components'
 
 // icons
-import { DribbbleIcon, FacebookIcon, TwitterIcon, YoutubeIcon } from '../../icons';
+import { DribbbleIcon, FacebookIcon, TwitterIcon, YoutubeIcon } from '../../icons'
 
 // components
-import { Сheckbox, Button, Form, FormRow, LinedText, LinkText, SocialLink, SocialLinks, TextField } from '../shared';
-
-// images
-import decorationImg from '../../images/landing/rocket.png'
+import { Сheckbox, Button, Form, FormRow, LinedText, LinkText, SocialLink, SocialLinks, TextField } from '../shared'
 
 const Login: FC = () => {
     return (
         <>
-            <Form title='Account Login' decoration={decorationImg}>
+            <Form title='Account Login'>
 
                 <FormRow>
-                    <TextField label='Username' />
+                    <TextField label='Username' autoFocus={true} />
                 </FormRow>
 
                 <FormRow>

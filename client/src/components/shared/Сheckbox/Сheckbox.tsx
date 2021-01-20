@@ -19,7 +19,7 @@ export interface СheckboxProps {
 /*----------------------------------------
         styles 
 ----------------------------------------*/
-const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
+const StyledHiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -30,7 +30,7 @@ const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   white-space: nowrap;
   width: 1px; 
 `
-const СheckboxWrapper = styled.div`
+const StyledСheckboxWrapper = styled.div`
     position: relative;    
 
     label {
@@ -43,7 +43,7 @@ const СheckboxWrapper = styled.div`
         padding-left: 34px;
     }
 `
-const СheckboxImagesBox = styled.div`
+const StyledСheckboxImagesBox = styled.div`
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +65,7 @@ const СheckboxImagesBox = styled.div`
         transition: fill .2s ease-in-out;
     }
 
-    ${HiddenCheckbox}:checked + && {
+    ${StyledHiddenCheckbox}:checked + && {
         background-color: ${({ theme }) => theme.primaryColor};
 
         svg {
@@ -81,15 +81,15 @@ const СheckboxImagesBox = styled.div`
 const Сheckbox: FC<СheckboxProps> = ({ label, name, id }) => {
 
     return (
-        <СheckboxWrapper>
-            <HiddenCheckbox id={id} name={name} />
+        <StyledСheckboxWrapper>
+            <StyledHiddenCheckbox id={id} name={name} />
 
-            <СheckboxImagesBox>
+            <StyledСheckboxImagesBox>
                 <SvgCrossIcon />
-            </СheckboxImagesBox>
+            </StyledСheckboxImagesBox>
 
             <label htmlFor={id}>{label}</label>
-        </СheckboxWrapper>
+        </StyledСheckboxWrapper>
     )
 }
 

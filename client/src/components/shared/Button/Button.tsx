@@ -21,7 +21,7 @@ export interface ButtonProps {
 /*----------------------------------------
         styles 
 ----------------------------------------*/
-const ButtonWrapper = styled.button<ButtonProps>`
+const StyledButtonWrapper = styled.button<ButtonProps>`
     display: inline-block;
     min-height: 54px;
     font-family: ${primaryFont};
@@ -105,10 +105,10 @@ ${props => props.secondary && css`
 --------------------------*/
 const Button: FC<ButtonProps> = ({ text, children, ...props }) => {
     return (
-        <ButtonWrapper text={text}  {...props}>
+        <StyledButtonWrapper text={text}  {...props}>
             {text}
             {children}
-        </ButtonWrapper>
+        </StyledButtonWrapper>
     )
 }
 

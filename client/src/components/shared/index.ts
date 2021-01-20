@@ -8,5 +8,7 @@ export { default as SocialLink } from './SocialLink/SocialLink'
 export { default as SocialLinks } from './SocialLinks/SocialLinks'
 export { default as TextField } from './TextField/TextField'
 export { default as Container } from './Container/Container'
+export { default as Search } from './Search/Search'
+export { default as ToggleTheme } from './ToggleTheme/ToggleTheme'
 
 

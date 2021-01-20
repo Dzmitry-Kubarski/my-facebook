@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-const TestPage: FC = () => {
+const ProfilePage: FC = () => {
     return (
         <div>
-            TestPage
+            ProfilePage
         </div>
     );
 };
 
-export default TestPage;
+export default ProfilePage

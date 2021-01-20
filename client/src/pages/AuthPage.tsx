@@ -12,24 +12,24 @@ import { Container } from '../components/shared'
 import { Login, Register } from '../components'
 
 // icons
-import { LogoIcon } from '../icons'
+import { LogoIcon, Logo2 } from '../icons'
 
 // images
-import pageBg from '../images/landing/bg-5.jpg'
-import pageBgNight from '../images/landing/bg-8.jpg'
+import pageBg from '../images/landing/bg-3.jpg'
+import pageBgNight from '../images/landing/bg-2.jpg'
 import dotTextureImg from '../images/dot-texture.png'
 import dotTextureNightImg from '../images/dot-texture-night.png'
+
 
 // styles
 const Page = styled.section`
     position: relative;
     width: 100%; 
-    background: ${({ theme }) => theme.title === 'light' ? `url(${pageBg})` : `url(${pageBgNight})`}};
+    background-image: ${({ theme }) => theme.title === 'light' ? `url(${pageBg})` : `url(${pageBgNight})`};
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
     overflow: hidden;
-    transition: background .3s linear;
+    transition: background-image .3s linear;
 `
 
 const PageInner = styled.div`
@@ -49,8 +49,7 @@ const PageDecoration = styled.div`
     width: 64%;
     height: 140%;
     border-radius: 50%;
-    background: ${({ theme }) => theme.title === 'light' ? `url(${dotTextureImg})` : `url(${dotTextureNightImg})`}};
-
+    background: ${({ theme }) => theme.title === 'light' ? `url(${dotTextureImg})` : `url(${dotTextureNightImg})`};
     background-repeat: repeat;
     background-position: left top;
     background-color: ${({ theme }) => theme.colorBoxBackground};
@@ -58,7 +57,7 @@ const PageDecoration = styled.div`
     top: -20%;
     right: -32%;
     pointer-events: none;
-    transition: background .3s linear;
+    transition: background-color .3s linear;
 
     @media (max-width: 960px) {
         display: none;   
@@ -98,8 +97,6 @@ const PageText = styled.p`
 `
 
 const LogoWrapper = styled.div`
-    margin-bottom: 35px;
-
     svg {
         width: 200px;
         height: 200px;
@@ -160,11 +157,12 @@ const AuthPage: FC = () => {
         <Page>
             <Container big>
                 <PageInner>
-                    <PageDecoration />
+                    {/* <PageDecoration /> */}
 
                     <Content>
                         <LogoWrapper>
-                            <LogoIcon />
+                            {/* <LogoIcon /> */}
+                            <Logo2 />
                         </LogoWrapper>
 
                         <h2 className="auth__subtitle">Welcome to</h2>
